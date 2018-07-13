@@ -1,5 +1,5 @@
 const objectid = require('objectid');
-const Joi = require('Joi');
+const Joi = require('joi');
 
 const books = [{_id: objectid(), name: 'FZA'}];
 

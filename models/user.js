@@ -2,7 +2,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 const objectid = require('objectid');
 const _ = require('lodash');
-const Joi = require('Joi');
+const Joi = require('joi');
 
 const users = [
     {_id: objectid(), name: 'francesco', email:'fran.zaz@test.com', password: '$2b$10$tP00fZ3R20fvfbhIKpQHQeJ66MGyTudrn5vEPV0RtABTIHw/hZjru' }
