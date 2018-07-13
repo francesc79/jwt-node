@@ -6,7 +6,7 @@
 <body>
 <div class="container container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Express</a>
+        <a class="navbar-brand" href="#">JWT-Express</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -81,27 +81,28 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email">
+                        <label for="email">Email (fran.zaz@test.com)</label>
+                        <input type="text" class="form-control" id="email" autocomplete="username">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password">
+                        <label for="password">Password (12345)</label>
+                        <input type="password" class="form-control" id="password" autocomplete="current-password">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" id="loginBtn">Login</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="loginAuth0Btn">Login Auth0</button>
             </div>
         </div>
     </div>
 </div>
 
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
 
 <script src="./ui-update.js"></script>
 <script src="./index.js"></script>

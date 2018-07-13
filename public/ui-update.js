@@ -10,6 +10,8 @@ UIUpdate.loggedOut = function() {
   localStorage.removeItem("access_token");
   loginModalBtn.classList.remove("d-none");
   logoutBtn.classList.add("d-none");
+  const resp = document.querySelector("#response");
+  resp.innerHTML = '';  
 };
 
 UIUpdate.routeChange = function() {
