@@ -1,14 +1,19 @@
 const objectid = require('objectid');
-const books = [];
+const Joi = require('Joi');
+
+const books = [{_id: objectid(), name: 'FZA'}];
 
 class Book {
     constructor(book) {
-        this.book = {...book, _id: objectid()};    
+        book = {...book, _id: objectid()};
+        Object.assign(this, book);    
     }
 
     save() {
-        books.push(this.book);
-        return Promise.resolve(this.book);
+        return new Promise((resolve, reject) => {
+            books.push(this);
+            return resolve(this);
+        });
     }
 
     static getBooks() {
@@ -16,7 +21,14 @@ class Book {
     }
 
     static findById(id) {
-        return books.find((book) => book._id === id);
+        return new Promise((resolve, reject) => {
+            const book = books.find((book) => book._id === id);
+            if (_.isUndefined(book)) {
+                reject();
+            } else {
+                resolve(book);
+            }
+        })
     }
 }
 
